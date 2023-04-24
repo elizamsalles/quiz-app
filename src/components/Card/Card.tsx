@@ -1,5 +1,8 @@
-interface IProps {}
 import styled from "styled-components";
+
+interface IProps {
+  children: React.ReactNode
+}
 
 const Card = styled.div`
   position: absolute;
@@ -12,7 +15,8 @@ const Card = styled.div`
 `;
 
 const CardComponent = (props: IProps) => {
-  return <Card />;
+  // Precisa usar o children pra renderizar o conteúdo
+  return <Card children={props.children} />;
 };
 
 export default CardComponent;
