@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 interface IProps {
-  children: React.ReactNode
+  // ReactNode: componente em React
+  children: React.ReactNode;
 }
 
 const Card = styled.div`
@@ -16,7 +17,7 @@ const Card = styled.div`
 
 const CardComponent = (props: IProps) => {
   // Precisa usar o children pra renderizar o conteúdo
-  return <Card children={props.children} />;
+  return <Card>{props.children}</Card>;
 };
 
 export default CardComponent;
